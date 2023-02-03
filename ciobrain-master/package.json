@@ -23,7 +23,7 @@
     "react-scripts": "4.0.3"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts build",
     "build-dev": "dotenv -e .env build",
     "test": "react-scripts test",
