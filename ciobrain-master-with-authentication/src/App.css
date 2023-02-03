@@ -1,0 +1,182 @@
+:root {
+    --red: #d12626; /* Application */
+    --green: #20a781; /* Data */
+    --blue: #2324c9; /* Infrastructure */
+    --yellow: #e68c05f1; /* People */
+    --purple: #7e2cb4; /* Projects */
+    --gray: #696969; /* Business */
+    --opaque-red: rgba(232, 26, 26, 0.1);
+    --opaque-green: rgba(36, 179, 138, 0.1);
+    --opaque-blue: rgba(35, 36, 201, 0.1);
+    --opaque-yellow: rgba(223, 146, 30, 0.1);
+    --opaque-purple: rgba(98, 35, 181, 0.1);
+    --opaque-gray: rgba(105, 105, 105, 0.1);
+}
+
+.assetsContainer {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 42px;
+    top: 60px;
+}
+
+.card {
+    position: relative;
+    width: 300px;
+    min-height: 350px;
+    margin: 20px 0;
+    background: #ffffff;
+    border: 1px solid #d6d6d6;
+    box-sizing: border-box;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    height: auto;
+}
+
+#assetMenu {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    padding: 5px 0 10px 0;
+}
+
+#assetMenuHeader {
+    display: flex;
+    justify-content: space-between;
+}
+
+#assetMenuHeader > div {
+    margin: 20px 0 0 20px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 28px;
+}
+
+#assetDetailHeader {
+    margin: 20px 0 0 20px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    line-height: 28px;
+    font-family: "Roboto", sans-serif;
+}
+
+#assetDetailSections {
+    margin: 20px 0 0 20px;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: left;
+    font-family: "Roboto", sans-serif;
+}
+
+#assetName {
+    text-align: left;
+    font-size: 22px;
+    margin: 20px 0 0 20px;
+}
+
+.alert {
+    position: fixed;
+    padding: 12px 20px;
+    background-color: #f44336;
+    color: white;
+    opacity: 1;
+    margin-top: 4px;
+    bottom: 10px;
+    right: 10px;
+    width: 40%;
+    font-size: 12px;
+    animation: enter 1 ease-in-out 2s;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+@keyframes enter {
+    0% {
+        right: -300px;
+    }
+    100% {
+        right: 10px;
+    }
+}
+
+.alert.info {
+    background-color: var(--blue);
+}
+
+#expandDetails{
+    display: none;
+}
+
+
+@media screen and (max-width: 812px) {
+
+    .detailsLabel{
+        display: block;
+        cursor: pointer;
+    }
+
+    #expandDetails + div + .detailsContent {
+        display: none;
+    }
+
+    #expandDetails:checked + div + .detailsContent {
+        display: block;
+    }
+
+    .chooseAssetButton {
+        background-color: #4c00ff;
+        border: none;
+        color: white;
+        text-align: center;
+        font-size: 0.8em;
+        margin: 0;
+        width: 100%;
+        box-shadow: 0 0.4em 0.4em rgba(0, 0, 0, 0.5);
+    }
+
+    .mobileAssetsContainer {
+        padding: 0.5em;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .assetsContainer {
+        display: none;
+    }
+
+    .card {
+        width: 100%;
+        left: 0;
+        top: 0;
+    }
+
+    #assetDetail {
+        border: 1px solid #220101;
+        width: -moz-fit-content;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        min-height: max-content;
+        padding-bottom: 0.25em;
+    }
+
+    #assetDetailHeader {
+        margin-top: 0.25em;
+        font-size: 1em;
+    }
+
+    #assetName {
+        margin-top: 0;
+        font-size: 1em;
+    }
+
+    #assetDetailSections {
+        margin-top: 0.5em;
+        font-size: 0.8em;
+        line-height: 1.2em;
+    }
+
+
+}

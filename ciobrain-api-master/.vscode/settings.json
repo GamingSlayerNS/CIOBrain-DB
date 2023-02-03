@@ -1,0 +1,4 @@
+{
+    "appService.deploySubpath": ".",
+    "appService.defaultWebAppToDeploy": "/subscriptions/feb27d34-340f-4fc6-9888-447d21847c53/resourceGroups/CIOBrainAPI-resource/providers/Microsoft.Web/sites/CIOBrainAPI"
+}

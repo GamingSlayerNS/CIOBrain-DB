@@ -1,0 +1,256 @@
+{
+	"info": {
+		"_postman_id": "67db048a-fd9b-4a6c-af43-c4ea089968fa",
+		"name": "CIOBrain API - Production",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Application Asset",
+			"item": [
+				{
+					"name": "GET - Asset by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://ciobrainapi.azurewebsites.net/asset/application/1",
+							"protocol": "https",
+							"host": [
+								"ciobrainapi",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"asset",
+								"application",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET - Find All Assets",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://ciobrainapi.azurewebsites.net/asset/application",
+							"protocol": "https",
+							"host": [
+								"ciobrainapi",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"asset",
+								"application"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET - Find Children Assets",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://ciobrainapi.azurewebsites.net/asset/application/1/children",
+							"protocol": "https",
+							"host": [
+								"ciobrainapi",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"asset",
+								"application",
+								"1",
+								"children"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Data Asset",
+			"item": [
+				{
+					"name": "GET - Asset by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://ciobrainapi.azurewebsites.net/asset/data/1",
+							"protocol": "https",
+							"host": [
+								"ciobrainapi",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"asset",
+								"data",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET - Find All Assets",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://ciobrainapi.azurewebsites.net/asset/data",
+							"protocol": "https",
+							"host": [
+								"ciobrainapi",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"asset",
+								"data"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET- Find Children Assets",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://ciobrainapi.azurewebsites.net/asset/application/1/children",
+							"protocol": "https",
+							"host": [
+								"ciobrainapi",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"asset",
+								"application",
+								"1",
+								"children"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Infrastructure Asset",
+			"item": [
+				{
+					"name": "GET - Asset by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://ciobrainapi.azurewebsites.net/asset/infrastructure/1",
+							"protocol": "https",
+							"host": [
+								"ciobrainapi",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"asset",
+								"infrastructure",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET - Find All Assets",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://ciobrainapi.azurewebsites.net/asset/infrastructure",
+							"protocol": "https",
+							"host": [
+								"ciobrainapi",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"asset",
+								"infrastructure"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET - Find Children Assets",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://ciobrainapi.azurewebsites.net/asset/infrastructure/1/children",
+							"protocol": "https",
+							"host": [
+								"ciobrainapi",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"asset",
+								"infrastructure",
+								"1",
+								"children"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Logging",
+			"item": [
+				{
+					"name": "Log",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\": \"Error: asset not found\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ciobrainapi.azurewebsites.net/log",
+							"protocol": "https",
+							"host": [
+								"ciobrainapi",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"log"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

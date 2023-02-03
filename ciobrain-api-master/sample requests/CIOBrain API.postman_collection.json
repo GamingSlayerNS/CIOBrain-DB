@@ -1,0 +1,210 @@
+{
+	"info": {
+		"_postman_id": "9dd55a54-2cd3-4887-9def-06173f061b53",
+		"name": "CIOBrain API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Application Asset",
+			"item": [
+				{
+					"name": "GET - Asset by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3001/asset/application/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"asset",
+								"application",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET - Find All Assets",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/asset/application",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"asset",
+								"application"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET - Find Children Assets",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/asset/application/1/children",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"asset",
+								"application",
+								"1",
+								"children"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Data Asset",
+			"item": [
+				{
+					"name": "GET - Asset by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3001/asset/data/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"asset",
+								"data",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET - Find All Assets",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/asset/data",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"asset",
+								"data"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET- Find Children Assets",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/asset/application/1/children",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"asset",
+								"application",
+								"1",
+								"children"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Infrastructure Asset",
+			"item": [
+				{
+					"name": "GET - Asset by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3001/asset/infrastructure/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"asset",
+								"infrastructure",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET - Find All Assets",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/asset/infrastructure",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"asset",
+								"infrastructure"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET - Find Children Assets",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/asset/infrastructure/1/children",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"asset",
+								"infrastructure",
+								"1",
+								"children"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

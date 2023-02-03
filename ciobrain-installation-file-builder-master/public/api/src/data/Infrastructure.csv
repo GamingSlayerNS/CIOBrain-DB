@@ -1,0 +1,10 @@
+Infrastructure ID,Long Type,Short Type,Name,Infrastructure Connections,Data Connections,Application Connections,Rack Coordinates,Vendor,Model,Software,Serial Number ,IP Address,Owner,Comment
+1,physical server,Phy SVR,server-1,I-8, ,,r15-2,Dell,d-415,win 10,sn-2248,10.176.138.32,George Ito,
+2,physical server,Phy SVR,server-2, ,D-1,,r15-3,HP,h-883,win 10,sn-43368,10.176.138.20,George Ito,
+3,physical server,Phy SVR,server-3,,D-2;D-3,,b16-2,Dell,d-415,win 10,sn-2250,10.176.138.18,George Ito,
+4,physical server,Phy SVR,server-4,,,,,,,,,,,
+5,personal,Ps,bus group 1,,,A-3,,,,,,,,
+6,firewall,Fire,,,,,,,,,,,,
+7,switch,Swit,,,,,,,,,,,,
+8,web-service,Web SVS,web primary in,I-1,,A-1;A-2,,Apache,,Apache  TC,,,Julie Web,
+9,other, ,,,,,,,,,,,,

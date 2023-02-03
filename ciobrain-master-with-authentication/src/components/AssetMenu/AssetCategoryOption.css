@@ -1,0 +1,18 @@
+.assetCategoryOption {
+    display: flex;
+    justify-content: left;
+    margin: 10px 10px 10px 10px;
+    padding: 10px 20px 10px 20px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.assetCategoryDropdown {
+    display: inline;
+    font-size: 14px;
+}
+
+.assetOption {
+    margin: 15px 5px 15px 50px;
+    font-size: 14px;
+}

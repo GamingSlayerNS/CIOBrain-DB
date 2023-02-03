@@ -1,0 +1,112 @@
+button {
+    width: 80px;
+    height: 30px;
+    border-radius: 10px;
+    margin: 15px 10px 0 0;
+}
+
+#assetMenuHeader > button {
+    background-color: var(--blue);
+    border: 1px solid var(--blue);
+    color: white;
+}
+
+#assetMenuHeader > button:hover {
+    background-color: var(--gray);
+    border: 1px solid var(--gray);
+}
+
+#assetMenuHeader > button:active {
+    background-color: lightgray;
+    border: 1px solid lightgray;
+    color: gray;
+}
+
+.closeButton {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 18px;
+    line-height: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closeButton:hover {
+    color: black;
+}
+
+.modal {
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    position: relative;
+}
+
+.modal > .header {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 25px;
+    vertical-align: middle;
+    border-bottom: 2px solid var(--blue);
+    text-align: center;
+    padding: 10px;
+    background-image: -webkit-radial-gradient(
+        50% 50%,
+        #742ad5,
+        #2527e4,
+        #02ca92
+    );
+    color: transparent;
+    -webkit-background-clip: text;
+}
+
+.modal > .close {
+    cursor: pointer;
+    position: absolute;
+    text-align: center;
+    right: -0.5em;
+    top: -0.5em;
+    font-size: 24px;
+    width: 20px;
+    line-height: 20px;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border: 1px solid #606060;
+}
+
+.modal > .close:hover {
+    background-color: var(--gray);
+}
+
+.content > form > * {
+    margin: 10px;
+}
+
+.loadButton {
+    margin: auto;
+    width: 80px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: var(--blue);
+    border: 1px solid var(--blue);
+    color: white;
+}
+
+.loadButton:hover,
+.loadButton:disabled {
+    background-color: var(--gray);
+    border: 1px solid var(--gray);
+}
+.butt
+
+.importDetails {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: 15px;
+    font-family: "Roboto", sans-serif;
+    padding-bottom: 10px;
+}
