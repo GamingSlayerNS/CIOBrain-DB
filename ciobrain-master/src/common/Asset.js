@@ -4,7 +4,9 @@ import { AssetCategoryEnum } from "../components/AssetCategoryEnum.js"
 import { URL } from "../URL";
 dotenv.config()
 
-const api = axios.create({ baseURL: URL })
+// adding asset here for convenience
+// baseURL should be the base URL and routes should be part of routing
+const api = axios.create({ baseURL: `${URL}/asset` })
 
 const get = async url => {
     try {
