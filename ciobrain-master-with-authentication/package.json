@@ -4,7 +4,6 @@
   "type": "module",
   "private": true,
   "dependencies": {
-    "@microsoft/edge-selenium-tools": "^3.6.1",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
@@ -17,7 +16,6 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "reactjs-popup": "^2.0.5",
-    "selenium-webdriver": "^4.0.0",
     "web-vitals": "^1.1.2",
     "xlsx": "^0.17.2"
   },
@@ -25,7 +23,7 @@
     "react-scripts": "4.0.3"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts build",
     "build-dev": "dotenv -e .env build",
     "test": "react-scripts test",
