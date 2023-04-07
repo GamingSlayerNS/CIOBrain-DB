@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import Popup from "reactjs-popup"
 import "./Login.css"
 import "reactjs-popup/dist/index.css"
-import * as LOGIN from "../../common/Login.js"
+//import * as LOGIN from "../../common/Login.js"
 import axios from "axios"
 const URL =
     process.env.NODE_ENV === "development"

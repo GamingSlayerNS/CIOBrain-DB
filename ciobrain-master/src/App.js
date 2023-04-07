@@ -6,6 +6,7 @@ import AssetDetails from "./components/AssetDetails"
 import Graph from "./components/Graph"
 import MessageModal from "./components/MessageModal"
 import Popup from "reactjs-popup"
+import Login from "./components/Login/Login"
 
 export default class App extends Component {
     constructor(props) {
@@ -64,6 +65,9 @@ export default class App extends Component {
         return (
             <div>
                 <Header />
+                <div className="loginContainer">
+                <Login />
+                </div>
                 {isSmallScreen && <div className="mobileAssetsContainer">
                         <Popup
                             trigger={<button className="chooseAssetButton">ASSETS</button>}

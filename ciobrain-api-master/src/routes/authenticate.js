@@ -14,6 +14,7 @@ const checkAuth = (req, res, next) => {
 }
 
 export const authenticate = (req, res, next) => {
+    console.log(req.body)
     if (req.body.password === process.env.PASSWORD) {
         next();
         return;
