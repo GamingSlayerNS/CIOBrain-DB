@@ -10,10 +10,10 @@ export default class BaseAssetController {
     }
 
     push = (req, res) => {
-        const assets = req.body.data
+        const assets = req.body
         res.json(
             Array.isArray(assets)
-                ? this._assetModel.push(req.body.data)
+                ? this._assetModel.push(req.body)
                 : { error: "Invalid Body" }
         )
     }
@@ -29,6 +29,8 @@ export default class BaseAssetController {
     }
 
     findAll = (req, res) => {
+        console.log(this._assetModel.findAll());
+        console.dir(this._assetModel.findAll());
         res.json(this._assetModel.findAll())
     }
 
