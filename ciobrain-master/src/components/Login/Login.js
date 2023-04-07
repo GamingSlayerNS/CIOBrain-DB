@@ -2,8 +2,8 @@ import React, { Component } from "react"
 import Popup from "reactjs-popup"
 import "./Login.css"
 import "reactjs-popup/dist/index.css"
-//import * as LOGIN from "../../common/Login.js"
 import axios from "axios"
+
 const URL =
     process.env.NODE_ENV === "development"
         ? "http://localhost:3002/auth"
@@ -55,9 +55,9 @@ export default class Login extends Component {
 
         const handleSubmit = async(event) => {
             event.preventDefault()
-            console.log(this.state.password+ " "+ this.state.loginsucc)
+            console.log(this.state.password+ " " + this.state.loginsucc)
             await this.pushAssets()
-            if(this.state.loginsucc==='True'){
+            if(this.state.loginsucc==='Success'){
                 close(event)
             }
 
@@ -79,7 +79,7 @@ export default class Login extends Component {
                 <div className="content">
                     {checkLoginned}
                     <form onSubmit={handleSubmit} style={formStyle}>
-                        <label>Password</label>
+                        <label>Enter your Password:</label>
                         <input
                             type="password"
                             style={{ width: "33.34%", margin: "auto" }}
@@ -96,12 +96,14 @@ export default class Login extends Component {
     
     async pushAssets() {
         const password = this.state.password
-        await post(URL,{pass: password}).then(response => {
-            console.log(response+"aaa")
-            this.state.loginsucc=response;
+        await post(URL, {pass: password}).then(response => {
+            console.log(URL + " " + response)
+            //this.state.loginsucc=response;
+            this.setState({loginsucc: response});
     })
     }
 }
+
 const post = async (url, data) => {
     try {
         return (await api.post(url, data)).data

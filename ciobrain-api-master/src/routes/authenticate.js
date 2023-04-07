@@ -5,11 +5,8 @@ dotenv.config();
 const authenticateRouter = Router()
 
 const checkAuth = (req, res, next) => {
-    console.log("{ pass: '" + process.env.PASSWORD + "' }")
     console.log(req.body)
-    console.log(req.body.password)
-    console.log(process.env.PASSWORD)
-    if (true == true) {
+    if (req.body.pass == process.env.PASSWORD) {
         res.status(200).send('Success')
         return;
     }
