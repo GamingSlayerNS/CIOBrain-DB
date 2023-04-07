@@ -20,10 +20,10 @@
     "xlsx": "^0.17.2"
   },
   "devDependencies": {
-    "react-scripts": "4.0.3"
+    "react-scripts": "^4.0.3"
   },
   "scripts": {
-    "start": "react-scripts --openssl-legacy-provider start",
+    "start": "react-scripts start --openssl-legacy-provider",
     "build": "react-scripts build",
     "build-dev": "dotenv -e .env build",
     "test": "react-scripts test",

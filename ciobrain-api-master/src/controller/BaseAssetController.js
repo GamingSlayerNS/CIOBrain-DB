@@ -9,6 +9,16 @@ export default class BaseAssetController {
         this._assetModel = assetModel
     }
 
+    delete = (req, res) =>{
+        const id = req.params.id
+        const asset = this._assetModel.findByIdAndDelete(id)
+        if (asset) res.json(asset)
+        else
+            res.json({
+                error: `${id} is not a valid ${this._assetModel.assetType} ID`
+            })
+    }
+
     push = (req, res) => {
         const assets = req.body
         res.json(

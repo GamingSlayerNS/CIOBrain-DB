@@ -2,6 +2,7 @@ import XLSX from "xlsx"
 
 export default class BaseAssetModel {
     constructor(filePath, assetType) {
+        //this.filePath = filePath
         const workbook = XLSX.readFile(filePath, { type: "binary" })
         this.data = XLSX.utils.sheet_to_json(
             workbook.Sheets[workbook.SheetNames[0]]
@@ -30,6 +31,16 @@ export default class BaseAssetModel {
                 importedAssets++
             }
         })
+        /*
+        // Convert the modified data back to a worksheet object
+        const worksheet = XLSX.utils.json_to_sheet(this.data)
+
+        // Create a new workbook object and add the worksheet
+        XLSX.utils.book_append_sheet(this.workbook, worksheet)
+
+        // Write the changes back to the Excel file
+        XLSX.writeFile(this.workbook, this.filePath, { bookType: 'xlsx', type: 'binary' })*/
+
         return {
             imported: importedAssets,
             duplicate: duplicateAssets,
@@ -37,6 +48,26 @@ export default class BaseAssetModel {
         }
     }
 
+    findByIdAndDelete = id => {
+        const index = this.data.findIndex(
+            item => parseInt(item[this.assetType + " ID"]) === parseInt(id)
+        );
+        if (index !== -1) {
+            // Delete the asset from the array and return it
+            return this.data.splice(index, 1)[0];
+        }
+    };
+
+
+    delete = id => 
+        this.data.find(
+            item => parseInt(item[this.assetType + " ID"]) === parseInt(id)
+        )
+        /*if (index !== -1) {
+            // Delete the asset from the array and return it
+            return this.data.splice(index, 1)[0];
+        }*/
+    
     findById = id =>
         this.data.find(
             item => parseInt(item[this.assetType + " ID"]) === parseInt(id)
