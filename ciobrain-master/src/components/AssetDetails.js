@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import { AssetCategoryEnum } from "./AssetCategoryEnum"
 import * as ERRORLOG from "./../common/ErrorLog"
 import { getAssetById } from "../common/Asset.js"
+import AssetUpdate from "./AssetUpdate/AssetUpdate"
 
 export default class AssetDetails extends Component {
     constructor(props) {
@@ -102,7 +103,10 @@ export default class AssetDetails extends Component {
                         <div>Comment: {asset["Comment"]}</div>
                     </div>
                 </div>
-
+                <div id="assetDetailHeader">
+                    <div>Modify</div>
+                    <AssetUpdate />
+                </div>
             </div>
         ) : null
     }

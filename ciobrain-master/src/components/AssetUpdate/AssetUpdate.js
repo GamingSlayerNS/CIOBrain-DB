@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import Popup from "reactjs-popup"
 //import { AssetCategoryEnum } from "../AssetCategoryEnum.js"
-import "./AssetCreate.css"
+import "./AssetUpdate.css"
 import "reactjs-popup/dist/index.css"
 //import XLSX from "xlsx"
 //import * as ASSET from "../../common/Asset.js"
@@ -21,7 +21,7 @@ const formStyle = {
     justifyContent: "center"
 }
 
-export default class AssetCreate extends Component {
+export default class AssetUpdate extends Component {
     constructor(props) {
         super(props)
         this.state = { category: null, asset: null, result: null }
@@ -30,7 +30,7 @@ export default class AssetCreate extends Component {
     render() {
         return (
             <Popup
-                trigger={<button className="createButton">Create</button>}
+                trigger={<button className="updateButton">Update</button>}
                 modal={true}
                 closeOnEscape={false}
                 closeOnDocumentClick={false}
@@ -69,7 +69,7 @@ export default class AssetCreate extends Component {
             const error = result["error"]
             if (error)
                 return (
-                    <div className="createDetails" style={{ color: "red" }}>
+                    <div className="updateDetails" style={{ color: "red" }}>
                         {error}
                     </div>
                 )
@@ -112,7 +112,7 @@ export default class AssetCreate extends Component {
                 <div className="close" onClick={closeAndReset}>
                     &times;
                 </div>
-                <div className="header">Create Assets</div>
+                <div className="header">Update Assets</div>
                 <div className="content">
                     <form onSubmit={submit} style={formStyle}>
                         <input
