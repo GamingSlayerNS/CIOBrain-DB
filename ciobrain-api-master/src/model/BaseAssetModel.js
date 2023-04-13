@@ -2,8 +2,8 @@ import XLSX from "xlsx"
 
 export default class BaseAssetModel {
     constructor(filePath, assetType) {
-        //this.filePath = filePath
-        const workbook = XLSX.readFile(filePath, { type: "binary" })
+        this.filePath = filePath
+        const workbook = XLSX.readFile(this.filePath, { type: "binary" })
         this.data = XLSX.utils.sheet_to_json(
             workbook.Sheets[workbook.SheetNames[0]]
         )
@@ -31,15 +31,14 @@ export default class BaseAssetModel {
                 importedAssets++
             }
         })
-        /*
-        // Convert the modified data back to a worksheet object
+        
+        // Convert the updated data array back to a worksheet object
         const worksheet = XLSX.utils.json_to_sheet(this.data)
 
-        // Create a new workbook object and add the worksheet
-        XLSX.utils.book_append_sheet(this.workbook, worksheet)
-
-        // Write the changes back to the Excel file
-        XLSX.writeFile(this.workbook, this.filePath, { bookType: 'xlsx', type: 'binary' })*/
+        // Write the worksheet object back to the Excel file
+        const newWorkbook = XLSX.utils.book_new()
+        XLSX.utils.book_append_sheet(newWorkbook, worksheet, "Sheet1")
+        XLSX.writeFile(newWorkbook, this.filePath)
 
         return {
             imported: importedAssets,
