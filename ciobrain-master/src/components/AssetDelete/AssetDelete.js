@@ -1,9 +1,9 @@
 import React, { Component } from "react"
 import Popup from "reactjs-popup"
-import { AssetCategoryEnum } from "../AssetCategoryEnum.js"
+//import { AssetCategoryEnum } from "../AssetCategoryEnum.js"
 import "./AssetDelete.css"
 import "reactjs-popup/dist/index.css"
-import XLSX from "xlsx"
+//import XLSX from "xlsx"
 import * as ASSET from "../../common/Asset.js"
 
 const modalStyle = {
@@ -20,8 +20,6 @@ const formStyle = {
     padding: "10px",
     justifyContent: "center"
 }
-
-const INVALID_FILE = {}
 
 export default class AssetDelete extends Component {
     
@@ -49,14 +47,14 @@ export default class AssetDelete extends Component {
             this.setState({ category: null, asset: null, result: null })
         }
 
-        const labelStyle = color => ({
-            display: "flex",
-            width: "33.33%",
-            color: color,
-            margin: "auto",
-            fontSize: "20px",
-            justifyContent: "center"
-        })
+        // const labelStyle = color => ({
+        //     display: "flex",
+        //     width: "33.33%",
+        //     color: color,
+        //     margin: "auto",
+        //     fontSize: "20px",
+        //     justifyContent: "center"
+        // })
 
         function handleSubmit(event) {
             //event.preventDefault();
