@@ -3,7 +3,6 @@ import AssetCategoryOption from "./AssetCategoryOption"
 import { AssetCategoryEnum } from "../AssetCategoryEnum"
 import AssetImport from "../AssetImport/AssetImport.js"
 import AssetCreate from "../AssetCreate/AssetCreate.js"
-import AssetDelete from "../AssetDelete/AssetDelete"
 
 export default class AssetMenu extends Component {
     constructor(props) {
@@ -30,7 +29,6 @@ export default class AssetMenu extends Component {
                     <div>Assets</div>
                     <AssetImport />
                     <AssetCreate />
-                    <AssetDelete />
                 </div>
                 {Object.values(AssetCategoryEnum).map(category => (
                     <AssetCategoryOption

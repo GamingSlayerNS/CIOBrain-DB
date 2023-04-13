@@ -46,14 +46,14 @@ export default class AssetCreate extends Component {
             this.setState({ category: null, asset: null, result: null })
         }
 
-        const labelStyle = color => ({
-            display: "flex",
-            width: "33.33%",
-            color: color,
-            margin: "auto",
-            fontSize: "20px",
-            justifyContent: "center"
-        })
+        // const labelStyle = color => ({
+        //     display: "flex",
+        //     width: "33.33%",
+        //     color: color,
+        //     margin: "auto",
+        //     fontSize: "20px",
+        //     justifyContent: "center"
+        // })
 
         const submit = event => {
             event.preventDefault()

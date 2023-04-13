@@ -48,10 +48,10 @@ export default class Login extends Component {
     }
 
     popupContent(close) {
-        const closeAndReset = event => {
-            close(event)
-            this.setState({asset: null})
-        }
+        // const closeAndReset = event => {
+        //     close(event)
+        //     this.setState({asset: null})
+        // }
 
         const handleSubmit = async(event) => {
             event.preventDefault()
