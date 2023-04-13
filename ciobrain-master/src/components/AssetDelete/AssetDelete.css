@@ -2,21 +2,28 @@ button {
     width: 80px;
     height: 30px;
     border-radius: 10px;
-    margin: 15px 10px 0 0;
+    margin: 10px 10px 10px 0;
 }
 
-#assetMenuHeader > button {
+.deleteButton {
+    width: 80px;
+    height: 30px;
+    border-radius: 10px;
+    margin: 20px 10px 10px 0;
+}
+
+#assetDetailCRUDing > button {
     background-color: var(--blue);
     border: 1px solid var(--blue);
     color: white;
 }
 
-#assetMenuHeader > button:hover {
+#assetDetailCRUDing > button:hover {
     background-color: var(--gray);
     border: 1px solid var(--gray);
 }
 
-#assetMenuHeader > button:active {
+#assetMenuCRUDing > button:active {
     background-color: lightgray;
     border: 1px solid lightgray;
     color: gray;

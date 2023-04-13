@@ -33,7 +33,7 @@ export default class AssetDelete extends Component {
     render() {
         return (
                 <Popup
-                    trigger={<button className="deletetButton">Delete</button>}
+                    trigger={<button className="deleteButton">Delete</button>}
                     modal={true}
                     closeOnEscape={false}
                     closeOnDocumentClick={false}
